@@ -1,0 +1,215 @@
+
+
+
+:root{
+    --text-color: rgb(248, 33, 101);
+    --bg-colour:black
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--bg-colour);
+}
+
+.title{
+    text-align: center;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.navbar{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 0%;
+    margin-bottom: 10px;
+}
+.navbar h3{
+    text-align: center;
+    padding: 0%;
+    margin: 0%;
+}
+.navbar h3:hover{
+    color: var(--text-color);
+}
+
+.show{
+    position: absolute;
+    left: 95%;
+    top: 10%;
+    display: none;
+    color: white;
+    background: var(--bg-colour);
+    border: 0px;
+}
+
+
+.nav-opt{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+.nav-opt li{
+    display: inline-block;
+    margin-top: 1.5%;
+    
+}
+
+.nav-opt a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight:bold;
+}
+
+.nav-opt a:hover{
+    text-decoration: underline;
+    color: var(--text-color);
+    scale: 1.1;
+}
+
+
+/* my details */
+
+.my-details{
+    min-width: 50vw;
+    max-width: 400px;
+    height: fit-content;
+    margin: 5% auto;
+    padding: 15px;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-pic video{
+    width: 350px;
+    height: 100%;
+    border-radius: 100%;
+    
+   
+}
+
+
+
+.typing-effect{
+    text-align: center;
+    color: white;
+}
+.autofill{
+    color: var(--text-color);
+}
+
+/* skill aection */
+.skill-section{
+    width: 50vw;
+    min-height: 500px;
+    margin: auto;
+    padding: 5%;
+    margin-bottom: 5%;
+    box-shadow: rgba(255, 144, 186, 0.248) 4.25px 4.25px  22px 1.5px;}
+
+.skill{
+    /* width: 45%; */
+    margin-bottom: 5%;
+    border: 2px solid var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 150px;
+}
+
+
+.skill button{
+    position: absolute;
+    top: 5%;
+    left: 80%;
+    border: 0px;
+    margin-right: 2%;
+    width: fit-content;
+    height: fit-content;
+    background:transparent;
+}
+
+
+.info h1{
+    font-size: 200%;
+    text-align: center;
+}
+.info p{
+    font-size: 50%;
+    text-align: center;
+    
+}
+
+.not-visible{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media  all and (max-width:700px) {
+    .navbar{
+        display: grid;
+        grid-template-columns: 100% ;
+    }
+    .show{
+        display: block;
+        left: 93%;
+    }
+    .nav-opt{
+        display: none;
+        position: absolute;
+        top: 100%;
+        background: var(--bg-colour);
+        color: white;
+        width: 100%;
+        
+    }
+    .nav-opt li{
+        margin: 5%;
+        display: block;
+        text-align: center;
+    }
+    .open{
+        display: block;
+    }
+
+    /* skill section */
+
+    .skill button{
+        position: absolute;
+        top: 5%;
+        left: 85%;
+        background: transparent;
+        border: 0px;
+    }
+    
+}
