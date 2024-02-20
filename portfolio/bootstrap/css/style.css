@@ -104,7 +104,7 @@ body{
     color: var(--text-color);
 }
 
-/* skill aection */
+/* skill section */
 .skill-section{
     width: 50vw;
     min-height: 500px;
@@ -112,6 +112,8 @@ body{
     padding: 5%;
     margin-bottom: 5%;
     box-shadow: rgba(255, 144, 186, 0.248) 4.25px 4.25px  22px 1.5px;}
+
+
 
 .skill{
     /* width: 45%; */
@@ -121,7 +123,12 @@ body{
     justify-content: center;
     align-items: center;
     position: relative;
-    height: 150px;
+    height: 160px;
+    border-radius: 5%;
+}
+
+.skill:hover{
+    background-color: rgba(254, 97, 147, 0.186);
 }
 
 
@@ -134,17 +141,22 @@ body{
     width: fit-content;
     height: fit-content;
     background:transparent;
+    
 }
+.skill i{
+    color: var(--text-color);
+}
+
 
 
 .info h1{
     font-size: 200%;
     text-align: center;
+    color: var(--text-color);
 }
-.info p{
-    font-size: 50%;
+.info a{
     text-align: center;
-    
+    color: var(--text-color);   
 }
 
 .not-visible{
@@ -152,10 +164,18 @@ body{
 }
 
 
+/* certidicates section */
 
-
-
-
+.certificate-div{
+    margin-bottom: 5%;
+}
+.cerificates-container{
+    width: 50vw;
+    margin: auto;
+    border: 2px solid var(--text-color);
+    border-radius:5%;
+    height: fit-content;
+}
 
 
 
@@ -211,5 +231,6 @@ body{
         background: transparent;
         border: 0px;
     }
+    
     
 }
