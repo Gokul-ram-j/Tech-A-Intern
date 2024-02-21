@@ -110,49 +110,74 @@ for(skill_name in mySkill)
     </div> 
     `
 }
-
+// {"title":"","src":""}
 //    -------------------------------- certificates --------------------------
 // my certificates
 let myCertificate={
-    "FrontEnd Development":[],
-    "Python":[],
-    "Java programming":[],
-    "React":[],
-    "BackEnd Development":[]
+    "FrontEnd Development":[
+        {"title":"HTML, CSS, and Javascript for Web Developers","src":"https://coursera.org/share/5397be832a94b78aaccc3012799f59d7"},
+        {"title":"Introduction to Front-End Development","src":"https://coursera.org/share/1f6ae9afdd8d0a5403688ffcb37ce32d"},
+        {"title":"Succeeding in Web Development: Full Stack and Front End","src":""}
+    ],
+    "Python":[
+        {"title":"Python(Basics)","src":"https://www.hackerrank.com/certificates/8f9aec679de6"},
+        {"title":"Intermediate Python for Non-Programmers","src":"https://www.linkedin.com/learning/certificates/352def1019050ed71b83b7c9cd04f8c1aa16a5f2446c02fc8d0b7f67bf022ab3"}
+    ],
+    "Java programming":[
+        {"title":"Java for beginners: Step-by-step hands-on guide to Java","src":"https://drive.google.com/file/d/1C-PiNn3M10C3rtccqfcqOqEdE4qhgBRU/view?usp=drivesdk"}
+    ],
+    "React":[
+        {"title":"React: Design Patterns","src":"https://www.linkedin.com/learning/certificates/837b889160f5552dd157cf5caa1fbbeb7d07f5d49c8bfe406416b133115944e6"}
+    ],
+    "BackEnd Development":[
+        {"title":"Introduction to Back-End Development","src":"https://www.coursera.org/account/accomplishments/verify/4AF5EAVZTHPC?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course"},
+        {"title":"SQL(Basics)","src":"https://www.hackerrank.com/certificates/34dbdf02bb02"},
+        {"title":"SQL Essential Training","src":"https://www.linkedin.com/learning/certificates/ebaee6bcfc41cc134814bfc3bc8dc84083aaa99a4f797d229418fef9ddd09e70"},
+        {"title":"Using SQL with Python","src":"https://www.linkedin.com/learning/certificates/38c125032f2b991cf64f976f4a44b53d38499ff80786d64d1232731606084d4c"},
+        {"title":"Database Foundations: Intro to Databases","src":"https://www.linkedin.com/learning/certificates/5ebe3a3077509a37c894e49e85ee45967800e5e50a61719462d40a0b57bd531e"}
+    ]
 }
 
 let certificate_container=document.querySelector(".certificates")
 for(cer in myCertificate){
+
+    let cer_div=document.createElement("div")
+    cer_div.setAttribute("class","certificate")
+    cer_div.innerHTML+=
+    `
+    <button onclick="display_certificate(this)" class="show-btn">
+        <h1>${cer}</h1>
+        <i class="fa fa-angle-down" aria-hidden="true"></i>
+    </button>
+    `
+    let cer_lst=document.createElement("ol")
+    cer_lst.setAttribute("class","not-visible")
+    for(certif of myCertificate[cer]){
+        cer_lst.innerHTML+=
+        `
+        <li><a href=${certif["src"]}>${certif["title"]}<i class="fa fa-external-link" aria-hidden="true"></i></a></li>
+        `
+    }
+
+    cer_div.append(cer_lst)
+    certificate_container.append(cer_div)
+
     
-    let elem =
-    `
-    <div class="certificate">
-        <button onclick="display_certificate(this.parentElement)" class="show-btn">
-            <h1>${cer}</h1>
-            <i class="fa fa-angle-down" aria-hidden="true"></i>
-        </button>
-        <ol class="not-visible">
-            <li><a href="">html for begginers <i class="fa fa-external-link" aria-hidden="true"></i></a></li>
-            <li><a href="">html fundamentals <i class="fa fa-external-link" aria-hidden="true"></i></a></li>
-            <li><a href="">html and css linking <i class="fa fa-external-link" aria-hidden="true"></i></a></li>
-            <li><a href="">programming in html <i class="fa fa-external-link" aria-hidden="true"></i></a></li>
-        </ol>
-    </div>
-    `
-    certificate_container.innerHTML+=elem
+    
 }
 
 // 
 
 // show certificates
 
-let cer_show_btn=document.querySelector(".show-btn")
-cer_show_btn.addEventListener("click",()=>{
-    cer_show_btn.querySelector("i").classList.toggle("fa-angle-down")
-    cer_show_btn.querySelector("i").classList.toggle("fa-angle-up")
-})
+// cer_show_btn.addEventListener("click",()=>{
+//     cer_show_btn.querySelector("i").classList.toggle("fa-angle-down")
+//     cer_show_btn.querySelector("i").classList.toggle("fa-angle-up")
+// })
 
 function display_certificate(elem){
-    elem.querySelector("ol").classList.toggle("not-visible")
+    elem.parentElement.querySelector("ol").classList.toggle("not-visible")
+    elem.querySelector("i").classList.toggle("fa-angle-down")
+    elem.querySelector("i").classList.toggle("fa-angle-up")
 }
 

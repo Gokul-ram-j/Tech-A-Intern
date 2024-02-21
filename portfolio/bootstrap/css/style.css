@@ -116,7 +116,6 @@ body{
 
 
 .skill{
-    /* width: 45%; */
     margin-bottom: 5%;
     border: 2px solid var(--text-color);
     display: flex;
@@ -173,7 +172,7 @@ body{
 .certificates{
     width: 50vw;
     margin: auto;
-    height: 500px;
+    height: fit-content;
 }
 
 
@@ -233,10 +232,13 @@ body{
 
 
 
-
+/* tablet and small laptops */
 
 
 @media  all and (max-width:700px) {
+
+   
+
     .navbar{
         display: grid ;
         grid-template-columns: 100% !important;
@@ -289,4 +291,25 @@ body{
         text-align: center;
     }
     
+}
+
+
+/* mobile view */
+
+@media screen and (max-width:400px){
+     /* making divs 100vw */
+
+     .my-details{
+        width: 90vw;
+    }
+
+    .skill-section{
+        width: 90vw;
+    }
+
+    .certificates{
+        width: 90vw;  
+    }
+
+    /* ------------------ */
 }
