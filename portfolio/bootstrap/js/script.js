@@ -110,3 +110,49 @@ for(skill_name in mySkill)
     </div> 
     `
 }
+
+//    -------------------------------- certificates --------------------------
+// my certificates
+let myCertificate={
+    "FrontEnd Development":[],
+    "Python":[],
+    "Java programming":[],
+    "React":[],
+    "BackEnd Development":[]
+}
+
+let certificate_container=document.querySelector(".certificates")
+for(cer in myCertificate){
+    
+    let elem =
+    `
+    <div class="certificate">
+        <button onclick="display_certificate(this.parentElement)" class="show-btn">
+            <h1>${cer}</h1>
+            <i class="fa fa-angle-down" aria-hidden="true"></i>
+        </button>
+        <ol class="not-visible">
+            <li><a href="">html for begginers <i class="fa fa-external-link" aria-hidden="true"></i></a></li>
+            <li><a href="">html fundamentals <i class="fa fa-external-link" aria-hidden="true"></i></a></li>
+            <li><a href="">html and css linking <i class="fa fa-external-link" aria-hidden="true"></i></a></li>
+            <li><a href="">programming in html <i class="fa fa-external-link" aria-hidden="true"></i></a></li>
+        </ol>
+    </div>
+    `
+    certificate_container.innerHTML+=elem
+}
+
+// 
+
+// show certificates
+
+let cer_show_btn=document.querySelector(".show-btn")
+cer_show_btn.addEventListener("click",()=>{
+    cer_show_btn.querySelector("i").classList.toggle("fa-angle-down")
+    cer_show_btn.querySelector("i").classList.toggle("fa-angle-up")
+})
+
+function display_certificate(elem){
+    elem.querySelector("ol").classList.toggle("not-visible")
+}
+
