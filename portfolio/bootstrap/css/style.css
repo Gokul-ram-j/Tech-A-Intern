@@ -214,7 +214,13 @@ body{
     color: var(--text-color);
 }
 
+/* internship section */
 
+.internship{
+    width: 50vw;
+    min-height: 200px;
+    margin: 2% auto 2% auto;
+}
 
 
 
