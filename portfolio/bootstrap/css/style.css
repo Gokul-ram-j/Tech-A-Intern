@@ -227,6 +227,7 @@ body{
     width: 100px;
     height: 100px;
     margin-bottom: 5%;
+    margin: auto;
 }
 
 
@@ -238,16 +239,31 @@ body{
 
 .intern-details>h1{
     color: var(--text-color);
+    text-align: center;
+}
+
+.intern-info{
+    width: fit-content;
+    margin: auto;
 }
 
 .intern-info>li{
     color: var(--text-color);
     list-style: none;
+    text-align: start;
 }
 
 .intern-info>li>a{
     color: var(--text-color);
 }
+
+
+
+/* project section */
+
+
+
+
 
 
 

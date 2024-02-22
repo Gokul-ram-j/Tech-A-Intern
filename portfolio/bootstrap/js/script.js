@@ -184,7 +184,7 @@ function display_certificate(elem){
 
 //  -------------------------------  internship section    ----------------------------------------------
 
-let carousel_inner=document.querySelector(".carousel-inner")
+let internship_carousel=document.querySelector(".intership-carousel")
 
 
 let myInternship=[
@@ -222,7 +222,7 @@ let myInternship=[
 
 ]
 
-// ${intern["active"]?"active":""}
+
 
 for(intern of myInternship){
     let elem=
@@ -241,8 +241,11 @@ for(intern of myInternship){
                 </div>
           </div>
     `
-    carousel_inner.innerHTML+=elem
+    internship_carousel.innerHTML+=elem
 }
+
+
+// -----------------------------project section--------------------------------------
 
 
 
