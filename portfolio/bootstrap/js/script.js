@@ -247,5 +247,47 @@ for(intern of myInternship){
 
 // -----------------------------project section--------------------------------------
 
+let project_carousel=document.querySelector(".project-carousel")
 
+let myProject=[
+
+    {
+        "title":"githubprofileviewer",
+        "src":"https://github.com/Gokul-ram-j/campus-coder",
+        "desc":"GITHUB PROFILE VIEWER",
+        "active":false
+    },
+    {
+        "title":"currencyexchange",
+        "src":"https://github.com/Gokul-ram-j/TechnoHacks-EduTech/tree/main/currency%20converter",
+        "desc":"CURRENCY CONVERSION",
+        "active":false
+    },
+    {
+        "title":"weathercasting",
+        "src":"https://github.com/Gokul-ram-j/Bharat-Intern/tree/main/weather%20web%20app",
+        "desc":" WEATHER CASTING",
+        "active":false
+    },
+    {
+        "title":"expensetracker",
+        "src":"https://github.com/Gokul-ram-j/learnsmasher/tree/main/expensetracker",
+        "desc":"EXPENSE TRACKER",
+        "active":true
+    }
+]
+
+for(proj of myProject){
+    let elem=
+    `
+    
+    <div class="carousel-item  ${proj["active"]?"active":""}">
+    <div class="project-details d-block w-100">
+        <img src="./assert/${proj["title"]}.png" alt="">
+        <p><a href="${proj["src"]}">${proj["desc"]} <i class="fa fa-external-link" aria-hidden="true"></i></a></p>
+    </div>
+    </div>
+    `
+    project_carousel.innerHTML+=elem
+}
 

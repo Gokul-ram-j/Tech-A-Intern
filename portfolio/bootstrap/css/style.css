@@ -16,6 +16,7 @@ body{
     text-align: center;
     font-weight: bold;
     color: var(--text-color);
+    margin: 5% auto;
 }
 
 .navbar{
@@ -218,7 +219,7 @@ body{
 
 .internship{
     width: 60vw;
-    margin: 2% auto 2% auto;
+    margin: 5% auto;
     text-align: center;
     height: fit-content;
 }
@@ -261,6 +262,34 @@ body{
 
 /* project section */
 
+.project{
+    width: 70vw;
+    margin: 5% auto;
+}
+
+
+.project-details{
+    width: 70%;
+    height: 70%;
+    text-align: center;
+}
+
+.project-details img{
+    width: 70%;
+    height: 70%;
+    border-radius: 5%;
+}
+.project-details a{
+    color: var(--text-color);
+
+}
+
+.project-details p{
+    background: #000;
+    margin-top: 5%;
+    font-weight: bold;
+    font-size: 100%;
+}
 
 
 
