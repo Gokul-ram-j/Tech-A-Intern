@@ -166,18 +166,83 @@ for(cer in myCertificate){
     
 }
 
-// 
-
 // show certificates
 
-// cer_show_btn.addEventListener("click",()=>{
-//     cer_show_btn.querySelector("i").classList.toggle("fa-angle-down")
-//     cer_show_btn.querySelector("i").classList.toggle("fa-angle-up")
-// })
 
 function display_certificate(elem){
     elem.parentElement.querySelector("ol").classList.toggle("not-visible")
     elem.querySelector("i").classList.toggle("fa-angle-down")
     elem.querySelector("i").classList.toggle("fa-angle-up")
 }
+
+
+
+
+
+
+
+
+//  -------------------------------  internship section    ----------------------------------------------
+
+let carousel_inner=document.querySelector(".carousel-inner")
+
+
+let myInternship=[
+    {
+        "company_name":"Codsoft",
+        "img":"https://media.licdn.com/dms/image/D560BAQHDmIfYA5sY7w/company-logo_200_200/0/1685777115831?e=1716422400&v=beta&t=N4LGZYwUjI-gspZlRvtUcNax3t2vO5hasybgpJXHxNs",
+        "role":"Python Programming Intern",
+        "date":"01/11/2023 - 30-01-2023",
+        "offer_letter":"https://drive.google.com/file/d/1Kk-rHseYS6aFcWWeEE80BOz5O5msa6X5/view?usp=drive_link",
+        "completion_letter":"https://drive.google.com/file/d/1LIzFuGknR3A9rA1um1t-RigHOzDc1xMY/view?usp=drive_link",
+        "company":"https://codsoft.in/",
+        "active":false
+    },
+    {
+        "company_name":"LearnSmasher EduTech LLP",
+        "img":"https://media.licdn.com/dms/image/D560BAQF3i9iyPePkvQ/company-logo_200_200/0/1706279614099?e=1716422400&v=beta&t=6S34JJEK3Noq5ozUam_Xh5JwIlggKd1QMUj8V64kjCQ",
+        "role":"Web Development Intern",
+        "date":"20/12/2023 - 20-01-2024",
+        "offer_letter":"https://drive.google.com/file/d/1KqhKdNL1i69ED3ig57HE6DRi4DX001vi/view?usp=drive_link",
+        "completion_letter":"https://drive.google.com/file/d/1LKBvVmrTNBemvE1E3mep9Pd88jZtP5u-/view?usp=drive_link",
+        "company":"https://learnsmasher.in/",
+        "active":false
+    },
+    {
+        "company_name":"OASIS InfoByte",
+        "img":"https://media.licdn.com/dms/image/C4E0BAQHfk_O8amPovQ/company-logo_200_200/0/1642532597684/oasis_infobyte_logo?e=1716422400&v=beta&t=T7-XRKrOCaGC4N2ysQTcAcYqP1nky6opEAC62k6yS4c",
+        "role":"Web Development Intern",
+        "date":"01/01/2024 - 05-02-2024",
+        "offer_letter":"https://drive.google.com/file/d/1KwLkJ5pDwAjyVmrj9y60NuLKiPzXqK2p/view?usp=drive_link",
+        "completion_letter":"https://drive.google.com/file/d/1u3V7JkUKFavxA1pqo8NwJqoh4uP3FLgw/view?usp=drive_link",
+        "company":"http://oasisinfobyte.com/",
+        "active":true
+    },
+   
+
+]
+
+// ${intern["active"]?"active":""}
+
+for(intern of myInternship){
+    let elem=
+    `
+    <div class="carousel-item ${intern["active"]?"active":""}">
+                <div class="intern-details  d-block w-10">
+                <img src=${intern["img"]}  alt="">
+                    <h1>${intern["company_name"]}</h1>
+                    <ul class="intern-info">
+                        <li><i class="fa fa-user-o" aria-hidden="true"></i> Role :${intern["role"]}</li>
+                        <li><i class="fa fa-calendar" aria-hidden="true"></i> ${intern["date"]}</li>
+                        <li><a href="${intern["offer_letter"]}"><i class="fa fa-file-text" aria-hidden="true"></i> View Offer Letter</a></li>
+                        <li><a href="${intern["completion_letter"]}"><i class="fa fa-check-circle-o" aria-hidden="true"></i> View Completion Letter</a></li>
+                        <li><a href="${intern["company"]}"><i class="fa fa-external-link" aria-hidden="true"></i> About Company </a></li>
+                    </ul>
+                </div>
+          </div>
+    `
+    carousel_inner.innerHTML+=elem
+}
+
+
 

@@ -206,21 +206,50 @@ body{
    
 }
 
-.certificate ol>li ,a{
+.certificate ol>li , .certificate ol>li>a{
     color: rgba(248, 33, 101, 0.514);
 }
 
-.certificate ol>li:hover ,a:hover{
+.certificate ol>li:hover , .certificate>ol>li>a:hover{
     color: var(--text-color);
 }
 
 /* internship section */
 
 .internship{
-    width: 50vw;
-    min-height: 200px;
+    width: 60vw;
     margin: 2% auto 2% auto;
+    text-align: center;
+    height: fit-content;
 }
+
+.intern-details>img{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 5%;
+}
+
+
+.intern-details img:hover{
+    -webkit-box-shadow: -1px 3px 28px -1px var(--text-color);
+    -moz-box-shadow: -1px 3px 28px -1px var(--text-color);
+    box-shadow: -1px 3px 28px -1px var(--text-color);
+}
+
+.intern-details>h1{
+    color: var(--text-color);
+}
+
+.intern-info>li{
+    color: var(--text-color);
+    list-style: none;
+}
+
+.intern-info>li>a{
+    color: var(--text-color);
+}
+
+
 
 
 
