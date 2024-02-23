@@ -1,12 +1,20 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins&family=Protest+Riot&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 
 :root{
     --text-color: rgb(248, 33, 101);
-    --bg-colour:black
+    --bg-colour:rgb(0, 0, 0);
+    --light-mode:rgba(231, 231, 231, 0.749);
+    
+}
+
+* {
+    font-family: "Protest Riot", sans-serif;
 }
 html{
     scroll-behavior: smooth;
+    
 }
 body{
     background-color: var(--bg-colour);
@@ -17,6 +25,8 @@ body{
     font-weight: bold;
     color: var(--text-color);
     margin: 5% auto;
+    
+
 }
 
 .navbar{
@@ -29,10 +39,9 @@ body{
     text-align: center ;
     padding: 0% ;
     margin: 0% ;
-}
-.navbar h3:hover{
     color: var(--text-color);
 }
+
 
 .show{
     position: absolute;
@@ -78,6 +87,9 @@ body{
     height: fit-content;
     margin: 5% auto;
     padding: 15px;
+    color:var(--text-color);
+    line-height: 175%;
+    text-align: center;
 }
 
 .profile-pic {
@@ -260,6 +272,8 @@ body{
 
 
 
+
+
 /* project section */
 
 .project{
@@ -285,34 +299,153 @@ body{
 }
 
 .project-details p{
-    background: #000;
     margin-top: 5%;
     font-weight: bold;
     font-size: 100%;
 }
 
 
+/* education */
+
+.education{
+    width: 70vw;
+    margin: 3% auto;
+    min-height: 200px;
+    text-align: center;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.checkpoint{
+    width: 50%;
+    color: var(--text-color);
+}
+.checkpoint h1{
+    text-decoration:underline;
+}
+
+.checkpoint:nth-child(odd){
+    transform: translateX(99.5%);
+    border-left: 2px solid var(--text-color);
+    margin: 0%;
+    text-align: start;
+}
+
+.checkpoint:nth-child(even){
+    border-right:2px solid var(--text-color);
+    margin: 0%;
+    text-align: end;
+}
+
+.checkpoint {
+    
+    position: relative;
+}
+
+.checkpoint:nth-child(odd)::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--text-color);
+    background: var(--text-color);
+    left: -2%;
+    top: 40%; 
+    background-color: var(--bg-colour);
+    border-radius:50%;
+    
+}
+.checkpoint:nth-child(even)::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--text-color);
+    background: var(--text-color);
+    left: 98.5%;
+    top: 40%;
+    border-radius:50%;
+    background-color: var(--bg-colour);
 
 
+}
+.edu-details{
+    padding: 5%;
+   
+}
+
+/* ---------------------contact------------------- */
+
+.contact{
+    width: 50vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: var(--text-color);
+}
+
+.contact-context{
+    text-align: center;
+}
+
+.contact-icon{
+    font-size: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+   
+}
+
+.contact-icon>a{
+   color: var(--text-color);
+}
 
 
+.copyright-div{
+    margin-top: 2.5%;
+    padding: 0.5%;
+    text-align: center;
+    color: var(--text-color);
+    border-top: 2px solid var(--text-color);
+    font-size: 20px;
+}
 
 
+/* ------------------------------------------------------------responsive navbar------------------------------------------------------------------------ */
+
+@media screen and (max-width:1170px) {
+    .navbar{
+        display: grid ;
+        grid-template-columns: 100% !important;
+    }
+    .show{
+        display: block;
+        left: 93%;
+    }
+    .nav-opt{
+        display: none;
+        position: absolute;
+        top: 100%;
+        background: var(--bg-colour);
+        color: white;
+        width: 100%;
+        
+    }
+    .nav-opt li{
+        margin: 5%;
+        display: block;
+        text-align: center;
+    }
+    .open{
+        display: block;
+    }
+
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* tablet and small laptops */
+/* -------------------------------------------------------------------tablet and small laptops--------------------------------------------------*/
 
 
 @media  all and (max-width:700px) {
@@ -370,9 +503,25 @@ body{
     .certificate ol>li{
         text-align: center;
     }
-    
-}
 
+    /* education */
+    
+    .education{
+        width: 80vw;
+        
+    }
+    /* contact */
+    .contact{
+        width: 50vw;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        color: var(--text-color);
+    }
+    
+
+}
+    
 
 /* mobile view */
 
@@ -390,6 +539,16 @@ body{
     .certificates{
         width: 90vw;  
     }
+    .education{
+        width: 98vw;
+        
+    }
+    .contact{
+        width: 90vw;
+    }
 
     /* ------------------ */
+  
+
+
 }

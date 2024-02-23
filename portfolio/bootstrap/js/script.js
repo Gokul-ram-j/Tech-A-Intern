@@ -12,6 +12,14 @@ open_btn.addEventListener("click",(e)=>{
     document.querySelector(".nav-opt").classList.toggle("open")
 })
 
+// closing menu
+let nav_elem=document.querySelector(".nav-opt")
+nav_elem.addEventListener("click",(e)=>{
+    document.querySelector(".nav-opt").classList.toggle("open")
+    menu.classList.toggle("fa-bars")
+    menu.classList.toggle("fa-close")
+})
+
 // changing menu sign
 
 let menu=document.querySelector(".menu")
