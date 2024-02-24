@@ -226,6 +226,16 @@ let myInternship=[
         "company":"http://oasisinfobyte.com/",
         "active":true
     },
+    {
+        "company_name":"Bharat Intern",
+        "img":"https://media.licdn.com/dms/image/D560BAQFV0JYJ33yONg/company-logo_200_200/0/1691701552297/bharat_intern_logo?e=1717027200&v=beta&t=bC7W43ibYq8w1B97VWSFM5LGahDh8sqi822XEd8JM_I",
+        "role":"Web Development Intern",
+        "date":"10/01/2024 - 10-02-2024",
+        "offer_letter":"https://drive.google.com/file/d/1KPcfmoSMUE-owxvwewJiJeAune67Pfu6/view?usp=drive_link",
+        "completion_letter":"https://drive.google.com/file/d/195AcpdOHBAvwpRoT1YMb8G8NInvHwq97/view?usp=drive_link",
+        "company":"https://bharatintern.live/",
+        "active":false
+    },
    
 
 ]
