@@ -3,17 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./style.css">
     <title>Document</title>
 </head>
 <body>
-
-    <h1>hello everyone</h1>
-    <h2>hello everyone</h2>
-    <h3>hello everyone</h3>
+      <h1>IMAGE SLIDER</h1>
+      <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img style="width:100%;height:100%;object-fit: cover;" src="./assert/img1.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img style="width:100%;height:100%;object-fit: cover;" src="./assert/img2.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img style="width:100%;height:100%;object-fit: cover;" src="./assert/img3.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img style="width:100%;height:100%;object-fit: cover;" src="./assert/img4.jpg" alt="">
+            </div>
+            <div class="swiper-slide">        
+                  <img style="width:100%;height:100%;object-fit: cover;" src="./assert/img5.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img style="width:100%;height:100%;object-fit: cover;" src="./assert/img6.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img style="width:100%;height:100%;object-fit: cover;" src="./assert/img7.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img style="width:100%;height:100%;object-fit: cover;" src="./assert/img8.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img style="width:100%;height:100%;object-fit: cover;" src="./assert/img9.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img style="width:100%;height:100%;object-fit: cover;" src="./assert/img10.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img style="width:100%;height:100%;object-fit: cover;" src="./assert/img11.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img style="width:100%;height:100%;object-fit: cover;" src="./assert/img12.jpg" alt="">
+            </div>
+          </div>
+      </div>
     
-    <img src="../" alt="">
     
-    <script src="./app.js"></script>
+    <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          grabCursor: true,
+          effect: "creative",
+          creativeEffect: {
+            prev: {
+              shadow: true,
+              translate: [0, 0, -400],
+            },
+            next: {
+              translate: ["100%", 0, 0],
+            },
+          },
+          loop:true
+        });
+    </script>
 </body>
 </html>

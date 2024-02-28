@@ -12,6 +12,11 @@ body {
     padding: 0%;
 }
 
+.navbar{
+    background: #000;
+    color: white;
+}
+
 /* intro section  */
 
 .intro{

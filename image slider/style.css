@@ -1,5 +1,31 @@
-h1,h2,h3{
-    color: red;
-    font-size: 50px;
-    font-style: italic;
+
+*{
+    padding: 0%;
+    margin: 0%;
 }
+body{
+    background: black;
+}
+h1{
+    text-align: center;
+    color: transparent;
+    font-family: monospace;
+    font-size: 6rem;
+    background: url("./assert/textbg.png");
+    background-size: contain;
+    background-clip: text;
+    -webkit-text-stroke: 1px white;
+    text-wrap: nowrap;
+}
+
+.swiper{
+    width: 70vw;
+    height:70vh;
+    margin-top: 2.5%;
+}
+
+.swiper{
+    box-shadow: 1px 1px 20px  rgba(255, 255, 255, 0.333),-1px -1px 20px  rgba(255, 255, 255, 0.333);
+
+}
+
