@@ -1,5 +1,4 @@
 
-
 let app_id="835abe5b"
 let app_key="324162b9baaf575256e1bbef92a86ebb"
 let recipe_container=document.querySelector(".recipe-container")
@@ -22,7 +21,7 @@ async function recipeResponse(){
     .then((res)=>res.json())
     .then((data)=>{
         // console.log(data)
-        
+        recipe_container.innerHTML=""
         for(id in data.hits){
             // console.log(data.hits[id].recipe.label)
             // console.log(data.hits[id].recipe)
